@@ -1,0 +1,125 @@
+html{
+    box-sizing: border-box;
+    background: #ffc600;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: 200;
+}
+
+body{
+    margin: 0;
+    width: 100%;
+    height: 100vh;
+}
+
+*, *::before, *:after{
+    box-sizing: inherit;
+}
+
+.panels{
+    min-height: 100vh;
+    overflow: hidden;
+    display: flex;
+}
+
+.panel{
+    background: #6b0f9c;
+    box-shadow: inset 0 0 0 3px rgba(255, 255, 255, 0.1);
+    color: white;
+    text-align: center;
+    align-items: center;
+    transition: 
+    font-size 0.7s cubic-bezier(0.61,-0.19, 0.7,-0.11),
+    flex 0.7s cubic-bezier(0.61,-0.19, 0.7,-0.11), s
+    background 0.2s;
+    font-size: 20px;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    justify-content: center;
+}
+
+.panel > *{
+    margin: 0;
+    width: 100%;
+    transition: transform 0.5s;
+    flex: 1 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.panel > *:first-child{
+    transform: translateY(-100%);
+}
+.panel.open-active > *:first-child{
+    transform: translateY(0);
+}
+
+.panel > *:last-child{
+    transform: translateY(100%);
+}
+.panel.open-active > *:last-child{
+    transform: translateY(0);
+}
+
+
+
+.panel1{
+    background: url(images/pink.jpg);
+}
+.panel2{
+    background: url(images/gray.jpg);
+}
+.panel3{
+    background: url(images/tab.jpg);
+}
+.panel4{
+    background: url(images/pads.jpg);
+}
+.panel5{
+    background: url(images/headphones.jpg);
+}
+
+.panel p{
+    text-transform: uppercase;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1.8em;
+    text-shadow: 0 0 4px rgba(0, 0, 0, 0.72), 0 0 14px rgba(0, 0, 0, 0.45);
+}
+
+.panel p:nth-child(2){
+    font-size: 3.6em;
+}
+
+.panel.open {
+    flex: 4;
+    font-size: 30px;
+    
+  }
+
+  @media only screen and (max-width: 600px) {
+    .panel p {
+      font-size: 0.8em;
+    }
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
